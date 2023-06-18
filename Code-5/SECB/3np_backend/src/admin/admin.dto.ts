@@ -3,9 +3,9 @@ export class AdminDTO{
     @IsString()
     @IsNotEmpty({message:"Name Cannot be Empty"})
     @Matches(/^[A-Za-z]+$/, { message: 'Enter a Proper Name!' })
-    @Length(50)
-    @MinLength(10)
-    @MaxLength(50)
+    @Length(10)
+    @MinLength(3)
+    @MaxLength(10)
     // @IsUrl(undefined,{message:"Invalid Url"})
     // @Matches(/^localhost:3000\/admin\/addadmin$/, { message: 'Invalid URL' })
     name:string;
@@ -17,5 +17,12 @@ export class AdminDTO{
     @IsNotEmpty()
     @IsStrongPassword()
     Password:string;
+    
+}
+export class AdminUpdateDTO{
+  id:number;
+  name: string;
+   email: string;
+   password: string;
     
 }
