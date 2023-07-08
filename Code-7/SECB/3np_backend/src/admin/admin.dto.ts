@@ -7,8 +7,9 @@ export class AdminDTO {
 
   // @IsEmail({}, { message: "invalid email" })
   email: string;
-  password: string;
   phone: number;
+  password: string;
+  filenames:string;
 }
 
 export class AdminUpdateDTO {
@@ -16,4 +17,12 @@ export class AdminUpdateDTO {
   name: string;
   email: string;
   password: string;
+}
+
+
+export class AdminLoginDTO{
+  // @IsEmail({},{message:"Invalid email"})
+  email: string;
+  password: string;
+
 }
